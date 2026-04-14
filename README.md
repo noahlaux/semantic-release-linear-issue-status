@@ -73,7 +73,9 @@ export LINEAR_API_KEY="lin_api_..."
 
 ### Commit scanning
 
-Issue IDs are parsed from each release commit’s `message`, `subject`, and `body` fields using word-boundary patterns: `\bPREFIX-\d+\b`.
+Issue IDs are parsed from each release commit's `message` and `subject` fields using word-boundary patterns: `\bPREFIX-\d+\b`.
+
+The commit `body` is intentionally **not** scanned. Authors often reference unrelated issues there for context (e.g. "related to NEU-99", "see also ENG-12"), and scanning it would cause those issues to be incorrectly moved to completed.
 
 ## Programmatic helpers
 
