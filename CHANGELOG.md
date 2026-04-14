@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.1.0...v1.1.1) (2026-04-14)
+
+
+### Bug Fixes
+
+* exclude commit body from issue identifier scanning ([b2b0da0](https://github.com/noahlaux/semantic-release-linear-issue-status/commit/b2b0da0b95762c763ce13a6c30b8850f46ee01c5))
+
 # [1.1.0](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.4...v1.1.0) (2026-04-14)
 
 
