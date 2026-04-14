@@ -1,0 +1,40 @@
+{
+  "name": "semantic-release-linear-issue-status",
+  "version": "1.0.0",
+  "description": "semantic-release plugin: set Linear issue workflow status after a successful release, based on issue IDs in release commits",
+  "license": "MIT",
+  "author": "Noah Laux",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahlaux/semantic-release-linear-issue-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noahlaux/semantic-release-linear-issue-status/issues"
+  },
+  "homepage": "https://github.com/noahlaux/semantic-release-linear-issue-status#readme",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "semantic-release": ">=21.0.0"
+  },
+  "keywords": [
+    "linear",
+    "semantic-release",
+    "semantic-release-plugin",
+    "release",
+    "automation"
+  ],
+  "dependencies": {
+    "@linear/sdk": "^81.0.0"
+  }
+}
