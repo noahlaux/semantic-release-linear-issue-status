@@ -20,8 +20,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "npm run lint:prettier && node --test test/*.test.cjs",
-    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=\"lib/**\" test/*.test.cjs",
+    "test": "npm run lint:prettier && node --test \"test/*.test.cjs\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=\"lib/**\" \"test/*.test.cjs\"",
     "lint:prettier": "prettier --check \"lib/**/*.js\" \"test/**/*.cjs\"",
     "lint:prettier:fix": "prettier --write \"lib/**/*.js\" \"test/**/*.cjs\""
   },
