@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.2...v1.0.3) (2026-04-14)
+
+
+### Bug Fixes
+
+* quote glob pattern in test scripts for Windows PowerShell compatibility ([c8dd78f](https://github.com/noahlaux/semantic-release-linear-issue-status/commit/c8dd78fcecd58708d5a28c84c8f6763d7c9f36c0))
+
 ## [1.0.2](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.1...v1.0.2) (2026-04-14)
 
 
