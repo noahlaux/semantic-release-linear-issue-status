@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.4...v1.1.0) (2026-04-14)
+
+
+### Features
+
+* publish to GitHub Packages on each release ([21af31c](https://github.com/noahlaux/semantic-release-linear-issue-status/commit/21af31ca5365a3f6e86f8174d0620e6f120520e3))
+
 ## [1.0.4](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.3...v1.0.4) (2026-04-14)
 
 
