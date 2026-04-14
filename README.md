@@ -6,7 +6,7 @@ It scans the commits included in the release for issue identifiers such as `NEU-
 
 ## Requirements
 
-- **Node.js** 18+ (uses global `fetch`)
+- **Node.js** 18+
 - **semantic-release** 21+
 - A Linear **personal API key** ([Security & access](https://linear.app/settings/account/security))
 
@@ -52,12 +52,19 @@ export LINEAR_API_KEY="lin_api_..."
 | `apiUrl`         | no       | `https://api.linear.app/graphql` | Override for the Linear API endpoint. |
 | `doneStateName`  | no       | `Done`             | Preferred **completed** workflow state name (case-insensitive). If no match, the first **completed** state (by `position`, then name) is used. |
 
+### Steps
+
+| Step | Description |
+|------|-------------|
+| `verifyConditions` | Verifies that `teamKey`, `issuePrefixes`, and the Linear API key environment variable are all present. Throws an error and aborts the release if any are missing. |
+| `success` | Scans release commits for issue identifiers, then moves each unresolved issue to the target completed workflow state. |
+
 ### Behavior
 
-- Runs on the semantic-release **`success`** step (after a release completes).
-- No-ops when `semantic-release` is run with **`--dry-run`**.
-- If the API key env var is unset, logs a **warning** and skips (does **not** fail the release).
-- Per-issue errors are logged; they do **not** fail the entire success step.
+- `verifyConditions` runs early in the semantic-release lifecycle and **fails fast** if configuration is incomplete, before any publish steps run.
+- `success` no-ops when semantic-release is run with **`--dry-run`**.
+- Issues already in a **completed** or **canceled** state are skipped.
+- Per-issue errors are logged but do **not** fail the overall release.
 
 ### Commit scanning
 

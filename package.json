@@ -6,7 +6,7 @@
   "author": "Noah Laux",
   "repository": {
     "type": "git",
-    "url": "https://github.com/noahlaux/semantic-release-linear-issue-status.git"
+    "url": "git+https://github.com/noahlaux/semantic-release-linear-issue-status.git"
   },
   "bugs": {
     "url": "https://github.com/noahlaux/semantic-release-linear-issue-status/issues"
@@ -19,7 +19,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "node --test test/*.test.cjs"
+    "test": "npm run lint:prettier && node --test --experimental-test-coverage --test-coverage-include=\"lib/**\" test/*.test.cjs",
+    "lint:prettier": "prettier --check \"lib/**/*.js\" \"test/**/*.cjs\"",
+    "lint:prettier:fix": "prettier --write \"lib/**/*.js\" \"test/**/*.cjs\""
   },
   "engines": {
     "node": ">=18.0.0"
@@ -36,5 +38,8 @@
   ],
   "dependencies": {
     "@linear/sdk": "^81.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.2"
   }
 }

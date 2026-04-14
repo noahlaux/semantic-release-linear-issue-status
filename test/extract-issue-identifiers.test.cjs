@@ -9,10 +9,10 @@ describe('extractLinearIssueIdentifiers', () => {
   const neuOnly = ['NEU'];
 
   it('extracts unique sorted identifiers', () => {
-    assert.deepEqual(
-      extractLinearIssueIdentifiers('feat: NEU-2 fix NEU-1 and NEU-2', neuOnly),
-      ['NEU-1', 'NEU-2']
-    );
+    assert.deepEqual(extractLinearIssueIdentifiers('feat: NEU-2 fix NEU-1 and NEU-2', neuOnly), [
+      'NEU-1',
+      'NEU-2',
+    ]);
   });
 
   it('returns empty for missing input or prefixes', () => {
@@ -35,9 +35,6 @@ describe('extractLinearIssueIdentifiersFromCommits', () => {
   });
 
   it('handles empty commits', () => {
-    assert.deepEqual(
-      extractLinearIssueIdentifiersFromCommits(undefined, ['NEU']),
-      []
-    );
+    assert.deepEqual(extractLinearIssueIdentifiersFromCommits(undefined, ['NEU']), []);
   });
 });
