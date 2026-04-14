@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.0...v1.0.1) (2026-04-14)
+
+
+### Bug Fixes
+
+* move coverage to separate script to support Node 18 in CI matrix ([9e15f9f](https://github.com/noahlaux/semantic-release-linear-issue-status/commit/9e15f9f0aed976109f6e4d609adf58fb09b430ea))
+
 # 1.0.0 (2026-04-14)
 
 
