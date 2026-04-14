@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.1...v1.0.2) (2026-04-14)
+
+
+### Bug Fixes
+
+* enforce LF line endings on Windows via .gitattributes and Prettier endOfLine config ([7f3c1da](https://github.com/noahlaux/semantic-release-linear-issue-status/commit/7f3c1da8175ae1bd82e704606361e29350b88e3d))
+
 ## [1.0.1](https://github.com/noahlaux/semantic-release-linear-issue-status/compare/v1.0.0...v1.0.1) (2026-04-14)
 
 
