@@ -9,7 +9,15 @@ module.exports = {
         changelogFile: 'CHANGELOG.md',
       },
     ],
+    // Publish to the public npm registry
     '@semantic-release/npm',
+    // Publish to GitHub Packages under the scoped name @noahlaux/...
+    [
+      '@semantic-release/exec',
+      {
+        publishCmd: 'scripts/publish-github-packages.sh ${nextRelease.version}',
+      },
+    ],
     '@semantic-release/github',
     [
       '@semantic-release/git',
