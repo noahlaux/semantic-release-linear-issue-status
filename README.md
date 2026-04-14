@@ -1,5 +1,10 @@
 # semantic-release-linear-issue-status
 
+[![Test](https://github.com/noahlaux/semantic-release-linear-issue-status/actions/workflows/test.yml/badge.svg)](https://github.com/noahlaux/semantic-release-linear-issue-status/actions/workflows/test.yml)
+[![Release](https://github.com/noahlaux/semantic-release-linear-issue-status/actions/workflows/release.yml/badge.svg)](https://github.com/noahlaux/semantic-release-linear-issue-status/actions/workflows/release.yml)
+[![npm](https://img.shields.io/npm/v/semantic-release-linear-issue-status)](https://www.npmjs.com/package/semantic-release-linear-issue-status)
+[![semantic-release](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin that moves **Linear** issues to a **completed** workflow state (by default the state named **Done**) after a **successful** release.
 
 It scans the commits included in the release for issue identifiers such as `NEU-123` (configurable prefixes), then uses the [Linear SDK](https://github.com/linear/linear/tree/master/packages/sdk) to update each issue. Issues that are already **completed** or **canceled** are skipped.
