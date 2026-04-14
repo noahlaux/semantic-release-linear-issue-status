@@ -23,15 +23,20 @@ describe('extractLinearIssueIdentifiers', () => {
 });
 
 describe('extractLinearIssueIdentifiersFromCommits', () => {
-  it('merges message, subject, and body', () => {
+  it('extracts from message and subject', () => {
     const ids = extractLinearIssueIdentifiersFromCommits(
-      [
-        { subject: 'fix: NEU-10', body: 'See NEU-11' },
-        { message: 'chore: NEU-12\n\nNEU-10 duplicate' },
-      ],
+      [{ subject: 'fix: NEU-10' }, { message: 'chore: NEU-12\n\nNEU-10 duplicate' }],
       ['NEU']
     );
-    assert.deepEqual(ids, ['NEU-10', 'NEU-11', 'NEU-12']);
+    assert.deepEqual(ids, ['NEU-10', 'NEU-12']);
+  });
+
+  it('does not scan body to avoid false positives from context references', () => {
+    const ids = extractLinearIssueIdentifiersFromCommits(
+      [{ subject: 'fix: NEU-10', body: 'Related to NEU-99, see also NEU-100' }],
+      ['NEU']
+    );
+    assert.deepEqual(ids, ['NEU-10']);
   });
 
   it('handles empty commits', () => {
