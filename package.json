@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-linear-issue-status",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "semantic-release plugin: set Linear issue workflow status after a successful release, based on issue IDs in release commits",
   "license": "MIT",
   "author": "Noah Laux",
